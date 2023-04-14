@@ -7,4 +7,4 @@ A Python script that tweets a ChatGPT-generated "viral" tweet
 - Enjoy your newfound Twitter fame!
 
 ## Follow Trenda Trenderson on Twitter
-[Trenda Trenderson](twitter.com/trendy_trenda)
+[Trenda Trenderson](https://twitter.com/trendy_trenda)
