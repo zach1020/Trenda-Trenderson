@@ -4,23 +4,26 @@
 import openai
 import api_keys 
 
-openai.api_key = api_keys.openai_key
-message_content = "Craft the perfect tweet that will definitely go viral."
-user_message = {"role": "assistant", "content": message_content}
-message_list = [
-    {"role":"system", "content": "You are a trendy young lady who loves to use Twitter."},
-    user_message
-    ]
+def gen_viral_tweet():
 
-bot = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  messages=message_list
-)
+  openai.api_key = api_keys.openai_key
+  message_content = "Craft the perfect tweet that will definitely go viral."
+  user_message = {"role": "assistant", "content": message_content}
+  message_list = [
+      {"role":"system", "content": "You are a trendy young lady who loves to use Twitter."},
+      user_message
+      ]
+
+  bot = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=message_list
+  )
 
 
-viral_tweet = bot['choices'][0]['message']['content'].replace('"', '')
+  viral_tweet = bot['choices'][0]['message']['content'].replace('"', '')
 
-#print(viral_tweet)
+  #print(viral_tweet)
 
+  return viral_tweet
 
 
